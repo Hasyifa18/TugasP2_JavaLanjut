@@ -8,10 +8,13 @@ public class Main {
         Tiket t2 = new TiketBisnis ("BK0002", "Yogyakarta", 150000);
         Tiket t3 = new TiketLuxury ("BK0003", "Surabaya", 150000);
 
+        Pembayaran bayar1 = new ByrTunai();
+        Pembayaran bayar2 = new ByrTransfer();
+
         PenjualanService service = new PenjualanService();
 
-        service.cetakTiket(p1, t1);
-        service.cetakTiket(p2, t2);
-        service.cetakTiket(p3, t3);
+        service.cetakTiket(p1, t1, bayar1);
+        service.cetakTiket(p2, t2, bayar1);
+        service.cetakTiket(p3, t3, bayar2);
     }
 }

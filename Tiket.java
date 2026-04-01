@@ -13,9 +13,9 @@ abstract class Tiket {
     abstract double hitungHarga();
 
     public void tampilInfo(Penumpang p){
-        System.out.println("Kode Booking : " + kodeBooking);
-        System.out.println("Nama         : " + p.getNama());
-        System.out.println("Tujuan       : " + tujuan);
-        System.out.println("Jenis Tiket  : " + getJenis());
+        System.out.println("Kode Booking      : " + kodeBooking);
+        System.out.println("Nama              : " + p.getNama());
+        System.out.println("Tujuan            : " + tujuan);
+        System.out.println("Jenis Tiket       : " + getJenis());
     }
 }
