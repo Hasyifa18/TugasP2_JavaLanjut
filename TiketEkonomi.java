@@ -1,11 +1,11 @@
 class TiketEkonomi extends Tiket {
-    public TiketEkonomi(String kodeBooking, String tujuan, double harga){
-        super(kodeBooking, tujuan, harga);
+    public TiketEkonomi(String kodeBooking, Kereta kereta){
+        super(kodeBooking, kereta);
     }
 
     @Override
     double hitungHarga(){
-        return harga;
+        return kereta.getHargaDasar();
     }
 
     @Override

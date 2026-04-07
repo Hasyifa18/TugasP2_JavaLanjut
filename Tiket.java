@@ -1,12 +1,10 @@
 abstract class Tiket {
     protected String kodeBooking;
-    protected String tujuan;
-    protected double harga;
+    protected Kereta kereta;
 
-    public Tiket(String kodeBooking, String tujuan, double harga) {
+    public Tiket(String kodeBooking, Kereta kereta) {
         this.kodeBooking = kodeBooking;
-        this.tujuan = tujuan;
-        this.harga = harga;
+        this.kereta = kereta;
     }
 
     abstract String getJenis();
@@ -15,7 +13,8 @@ abstract class Tiket {
     public void tampilInfo(Penumpang p){
         System.out.println("Kode Booking      : " + kodeBooking);
         System.out.println("Nama              : " + p.getNama());
-        System.out.println("Tujuan            : " + tujuan);
+        System.out.println("Kereta            : " + kereta.getNamaKereta());
+        System.out.println("Rute              : " + kereta.getRute());
         System.out.println("Jenis Tiket       : " + getJenis());
     }
 }
